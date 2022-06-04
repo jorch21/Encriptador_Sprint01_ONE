@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courgette', cursive;
+    background-color: #EEEEEE;
+}
+
+.cabecera{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.cabecera img{
+    margin: 5px 40px;
+    width: 5vw;
+}
+
+.cabecera h1{
+    width: 95vw;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.contenedor{
+    width: 80vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 5px;
+}
+
+/* Contenido del texto a encriptar */
+.area-texto{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 10px;
+    width: 40vw;
+}
+
+.area-texto textarea, .resultado-texto textarea{
+    border: none;
+    resize: none;
+    outline: none;
+    padding: 20px;
+    font-size: 1rem;
+    color: #000;
+    font-weight: bold;
+    font-family: 'Courgette', cursive;
+    background-color: #EEE;
+    border-radius: 10px;
+}
+
+.area-texto textarea:focus{
+    box-shadow: 0 0 10px #000;
+}
+
+.mensaje-error{
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ff0000;
+    margin-top: 10px;
+}
+
+.mensaje-copia{
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.botones{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.botones #encriptar, .botones #desencriptar{
+    font-family: 'Courgette', cursive;
+    background-color: #000;
+    color: #fff;
+    width: 40%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 10px;
+    width: 45%;
+}
+
+.botones #encriptar:hover, .botones #desencriptar:hover{
+    background-color: #fff;
+    color: #000;
+    font-weight: bold;
+    outline: 2px solid #000;
+    cursor: pointer;
+}
+
+/* Contenido del resultado */
+.resultado-texto{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 10px;
+    width: 25vw;
+}
+
+.resultado-texto button{
+    font-family: 'Courgette', cursive;
+    background-color: #fff;
+    color: #000;
+    width: 40%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.resultado-texto button:hover{
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+    /* outline: 2px solid #000; */
+    cursor: pointer;
+}
+
+.pie-pagina p{
+    text-align: center;
+    margin-top: 30px;
+    color: #000;
+}
+
+.pie-pagina span{
+    font-weight: bold;
+}
+
+/* Para diseño responsive */
+@media screen and (max-width: 450px){
+    .cabecera{
+        width: 90vw;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .cabecera img{
+        margin: 10px auto;
+        width: 20vw;
+    }
+    
+    .cabecera h1{
+        width: 100vw;
+        text-align: center;
+        margin: 10px 0;
+        font-size: 1.5rem;
+    }
+
+    .contenedor{
+        width: 80vw;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .area-texto{
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: #fff;
+        border-radius: 10px;
+        width: 80vw;
+        margin-bottom: 10px;
+    }
+    
+    .area-texto textarea, .resultado-texto textarea{
+        resize: none;
+        outline: none;
+        padding: 20px;
+        font-size: .8rem;
+        font-family: 'Courgette', cursive;
+        background-color: #EEE;
+        border-radius: 10px;
+    }
+    
+    .area-texto textarea:focus{
+        box-shadow: 0 0 10px #000;
+    }
+    
+    .mensaje-error{
+        font-size: .6rem;
+        font-weight: bold;
+        color: #ff0000;
+        margin-top: 10px;
+    }
+
+    .mensaje-copia{
+        font-size: .6rem;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+    
+    .botones{
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .botones #encriptar, .botones #desencriptar{
+        font-family: 'Courgette', cursive;
+        background-color: #000;
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: bold;
+        border-radius: 10px;
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .resultado-texto{
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: #fff;
+        border-radius: 10px;
+        width: 80vw;
+    }
+    
+    .resultado-texto button{
+        font-family: 'Courgette', cursive;
+        background-color: #fff;
+        color: #000;
+        width: 100%;
+        font-size: 1.2rem;
+        font-weight: bold;
+        border-radius: 10px;
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    .pie-pagina p{
+        text-align: center;
+        margin-top: 30px;
+        color: #000;
+    }
+    
+    .pie-pagina span{
+        font-weight: bold;
+    }
+}
